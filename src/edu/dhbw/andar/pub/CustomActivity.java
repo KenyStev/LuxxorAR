@@ -21,6 +21,9 @@ import edu.dhbw.andar.nav.Explosion;
 import edu.dhbw.andar.nav.Explosion1A;
 import edu.dhbw.andar.nav.Explosion2;
 import edu.dhbw.andar.nav.Explosion2A;
+import edu.dhbw.andar.nav.Flotador;
+import edu.dhbw.andar.nav.Flotador2;
+import edu.dhbw.andar.nav.Flotador3;
 import edu.dhbw.andar.nav.Jugador1;
 import edu.dhbw.andar.nav.Jugador2;
 import edu.dhbw.andar.nav.Poder1;
@@ -70,6 +73,15 @@ public class CustomActivity extends AndARActivity {
 		try
 		{
 			Global.artoolkit = super.getArtoolkit();
+			
+			Global.flotador1 = new Flotador();
+			Global.artoolkit.registerARObject(Global.flotador1);
+			
+			Global.flotador2 = new Flotador2();
+			Global.artoolkit.registerARObject(Global.flotador2);
+			
+			Global.flotador3 = new Flotador3();
+			Global.artoolkit.registerARObject(Global.flotador3);
 
 //			Global.wing = new Wing();
 //			Global.artoolkit.registerARObject(Global.wing);
@@ -97,14 +109,14 @@ public class CustomActivity extends AndARActivity {
 //			
 //			Global.explosion4 = new Explosion4();
 //			Global.artoolkit.registerARObject(Global.explosion4);
-			Global.jugador1=new Jugador1();
-			Global.artoolkit.registerARObject(Global.jugador1);
+//			Global.jugador1=new Jugador1();
+//			Global.artoolkit.registerARObject(Global.jugador1);
 			
 //			Global.jugador2=new Jugador2();
 //			Global.artoolkit.registerARObject(Global.jugador2);
 			
-			Global.explosion1 = new Explosion();
-			Global.artoolkit.registerARObject(Global.explosion1);
+//			Global.explosion1 = new Explosion();
+//			Global.artoolkit.registerARObject(Global.explosion1);
 			
 //			Global.explosion2 = new Explosion2();
 //			Global.artoolkit.registerARObject(Global.explosion2);
@@ -242,6 +254,11 @@ public class CustomActivity extends AndARActivity {
 	public boolean onTouchEvent(MotionEvent event)
 	{
 		super.onTouchEvent(event);
+		
+		if(Global.flotador1.isVisible()){
+			Global.flotador1.active=true;
+		}
+		
 		/*super.onTouchEvent(event);
 		if(monstruo1.isVisible() && !monstruo2.isVisible() && monstruo1.model.scale==4)
 		{
@@ -285,11 +302,11 @@ public class CustomActivity extends AndARActivity {
 //				Global.turno_jugador_1=!Global.turno_jugador_1;
 //			}
 			
-			if(Global.jugador1.isVisible())
+/*			if(Global.jugador1.isVisible())
 			{
 				Global.explosion1.explotando=true;
 			}
-			
+*/			
 //			if(Global.wing.isVisible())
 //				Global.explosion3.explotando=true;
 //			if(Global.dreamspark.isVisible())

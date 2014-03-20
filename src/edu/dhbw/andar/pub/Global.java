@@ -8,6 +8,9 @@ import edu.dhbw.andar.nav.Explosion;
 import edu.dhbw.andar.nav.Explosion1A;
 import edu.dhbw.andar.nav.Explosion2;
 import edu.dhbw.andar.nav.Explosion2A;
+import edu.dhbw.andar.nav.Flotador;
+import edu.dhbw.andar.nav.Flotador2;
+import edu.dhbw.andar.nav.Flotador3;
 import edu.dhbw.andar.nav.Jugador1;
 import edu.dhbw.andar.nav.Jugador2;
 import edu.dhbw.andar.nav.Poder1;
@@ -26,9 +29,13 @@ public class Global {
 	
 	public static boolean turno_jugador_1=true;	
 	
-	public static Jugador1 jugador1;
+	public static Flotador flotador1;
+	public static Flotador2 flotador2;
+	public static Flotador3 flotador3;
+	
+//	public static Jugador1 jugador1;
 //	public static Jugador2 jugador2;
-	public static Explosion explosion1;
+//	public static Explosion explosion1;
 //	public static Explosion2 explosion2;
 //	public static Explosion1A explosion1a;
 //	public static Explosion2A explosion2a;
